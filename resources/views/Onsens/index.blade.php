@@ -1,9 +1,8 @@
-@extends('layoutss.default')
+@extends('original_layouts.default')
 <header class="jumbotron-fluid header1">
   <div class="title">
     <h1 class="front_h1">関東温泉</h1>
   </div>
-  <a href="{{ route('login') }}">Login</a>
   <div class="author_box">
   </div>
     <div class="container">
@@ -76,18 +75,7 @@
       </div>
     </div>
 </header>
-<div class="contaienr main_section">
-  <article>
-    @foreach ($onsens as $onsen)
-    <div class="article_box">
-      <div class="article_inner-box">
-        <h2><a href="{{ action('OnsenController@show', $onsen->id) }}">{{ $onsen->name }}</a></h2>
-          <div class="p_box">
-            <p class="{{ prefecture($onsen->prefectureint) }}">{{ $onsen->prefecture }}</p>
-          </div>
-        <p class="front-img"><a href="{{ action('OnsenController@show',$onsen->id) }}"><img src="/img/{{ $onsen->picint }}.jpg"></a></p>
-      </div>
-    </div>
-    @endforeach
-  </article>
-</div>
+<!-- 店舗ループ -->
+@include('original_layouts.loop')
+<!-- footer -->
+@include('original_layouts.footer')

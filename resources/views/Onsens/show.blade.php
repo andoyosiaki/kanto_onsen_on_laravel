@@ -1,4 +1,4 @@
-@extends('layoutss.default2')
+@extends('original_layouts.default2')
 <div class="{{ prefecture($onsen->prefectureint) }} sub">
   <div class="header_box">
     <div class="header_text">
@@ -107,3 +107,5 @@
       <a href="{{ url('/') }}">戻る</a>
     </div>
 </article>
+<!-- footer -->
+@include('original_layouts.footer')

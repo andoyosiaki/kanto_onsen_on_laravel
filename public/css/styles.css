@@ -2,21 +2,6 @@
 a{
   text-decoration: none;
 }
-/* dl{
-  display: flex;
-  vertical-align: middle;
-}
-
-dt{
-  margin-bottom: 8px;
-}
-
-dd{
-  margin-left: 15px;
-  padding-left: 15px;
-  line-height: 1;
-  border-left: 1px solid #555;
-} */
 
 input{
   margin: 4px!important;
@@ -337,6 +322,15 @@ background-color: snow;
 
 .hidden_box{
   display: none;
+}
+
+/* footer */
+footer{
+  background-color: #53777A;
+  border-bottom: 2px solid #542437;
+  border-top: 2px solid #542437;
+  text-align: center;
+  padding: 20px 10px 3px;
 }
 
 
