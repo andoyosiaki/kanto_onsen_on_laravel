@@ -1,13 +1,7 @@
 @extends('original_layouts.default')
-<header class="jumbotron-fluid header2">
-  <div class="container header_box">
-    <div class="header_text">
-      <p class='type_p'><a href="{{ url('/') }}">関東温泉</a></p>
-      <h1 class="type_h1">{{ _prefecture($prefecture) }}</h1>
-    </div>
-  </div>
-</header>
+<!-- header -->
+@include('include_files.header',['title' => _prefecture($prefecture) ])
 <!-- 店舗ループ -->
-@include('original_layouts.loop')
+@include('include_files.loop')
 <!-- footer -->
-@include('original_layouts.footer')
+@include('include_files.footer')

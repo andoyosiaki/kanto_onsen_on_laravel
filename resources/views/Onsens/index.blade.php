@@ -76,6 +76,6 @@
     </div>
 </header>
 <!-- 店舗ループ -->
-@include('original_layouts.loop')
+@include('include_files.loop')
 <!-- footer -->
-@include('original_layouts.footer')
+@include('include_files.footer')

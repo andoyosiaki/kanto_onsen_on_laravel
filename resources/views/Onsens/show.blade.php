@@ -9,18 +9,18 @@
 </div>
 <article>
     <div class="container section1">
-        <div class="onsen_title_box">
-          <div class="onsen_title">
-              <h1 class="animated slideInLeft">{{ $onsen->name }}</h1>
-          </div>
-          <div class="onsen_adress">
-              <h2 class="animated slideInRight">所在地:{{ $onsen->prefecture }}</h2>
-              <address class="animated slideInRight">住所:{{ $onsen->adress }}</address>
-          </div>
+      <div class="onsen_title_box">
+        <div class="onsen_title">
+          <h1 class="animated slideInLeft">{{ $onsen->name }}</h1>
         </div>
-        <p class="front-img">
-          <img src="/img/{{ $onsen->picint }}.jpg">
-        </p>
+        <div class="onsen_adress">
+          <h2 class="animated slideInRight">所在地:{{ $onsen->prefecture }}</h2>
+          <address class="animated slideInRight">住所:{{ $onsen->adress }}</address>
+        </div>
+      </div>
+      <p class="front-img">
+        <img src="/img/{{ $onsen->picint }}.jpg">
+      </p>
     </div>
     <div class="container btn_box">
       <div class="inner-btn_box">
@@ -66,38 +66,32 @@
 <!-- --------------------------- -->
     <div class="info_section">
       <div class="onsen_data1">
-        <div class="col-12 col-md-4">
-          <dl class="open_time">
-            <dt>営業時間</dt>
-            <dd class="open_weekday">平日　{{ timesubstr($onsen->time_opne) }} - {{ timesubstr($onsen->time_close) }}</dd>
-            <dd class="open_holiday">休日　{{ checktime(timesubstr($onsen->w_time_opne)) }} - {{ checktime(timesubstr($onsen->w_time_close)) }}
-            </dd>
-          </dl>
-        </div>
+        <dl class="open_time">
+          <dt>営業時間</dt>
+          <dd class="open_weekday">平日　{{ timesubstr($onsen->time_opne) }} - {{ timesubstr($onsen->time_close) }}</dd>
+          <dd class="open_holiday">休日　{{ checktime(timesubstr($onsen->w_time_opne)) }} - {{ checktime(timesubstr($onsen->w_time_close)) }}
+          </dd>
+        </dl>
 <!-- --------------------------- -->
 <!-- 休店日 -->
 <!-- --------------------------- -->
-        <div class="col-12 col-md-4">
-          <dl class="holiday">
-            <dt>休店日</dt>
-            <dd>{{ $onsen->close }}</dd>
-            <dd class="text">{{ $onsen->close_text }}</dd>
-          </dl>
-        </div>
+        <dl class="holiday">
+          <dt>休店日</dt>
+          <dd>{{ $onsen->close }}</dd>
+          <dd class="text">{{ $onsen->close_text }}</dd>
+        </dl>
 <!-- --------------------------- -->
 <!-- 割引情報 -->
 <!-- --------------------------- -->
-        <div class="col-12 col-md-4">
           <dl class="dis_info">
             <dt>割引情報</dt>
             <dd class="jaf">JAF割引：
-                @if ($onsen->jaf_url === '') {{ '割引情報はありません' }} @else <a href="https://jafnavi.jp/web/facility.php?sisetu_id={{ $onsen->jaf_url }}">割引内容</a> @endif
+            @if ($onsen->jaf_url === '') {{ '割引情報はありません' }} @else <a href="https://jafnavi.jp/web/facility.php?sisetu_id={{ $onsen->jaf_url }}">割引内容</a> @endif
             </dd>
             <dd class="nifty">Nfty割引：
-                @if ($onsen->nifty_url === '') {{ '割引情報はありません' }} @else <a href="https://onsen.nifty.com/{{ $onsen->nifty_url }}">割引内容</a> @endif
+            @if ($onsen->nifty_url === '') {{ '割引情報はありません' }} @else <a href="https://onsen.nifty.com/{{ $onsen->nifty_url }}">割引内容</a> @endif
             </dd>
           </dl>
-        </div>
       </div>
         <div class="map">
           <iframe src=https://www.google.com/maps/d/embed?mid<?= $eq,$map,$eq,$onsen->map; ?>></iframe>
@@ -108,4 +102,4 @@
     </div>
 </article>
 <!-- footer -->
-@include('original_layouts.footer')
+@include('include_files.footer')
