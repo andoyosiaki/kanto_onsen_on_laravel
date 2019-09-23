@@ -8,10 +8,10 @@
   </div>
 </header>
 <div class="contaienr main_section">
-  <article class="animated">
+  <article>
     @foreach ($onsens as $onsen)
-    <div class="article_box animated">
-      <div class="article_inner-box animated">
+    <div class="article_box">
+      <div class="article_inner-box">
         <h2><a href="{{ action('OnsenController@show', $onsen->id) }}">{{ $onsen->name }}</a></h2>
           <div class="p_box">
             <p class="{{ prefecture($onsen->prefectureint) }}">{{ $onsen->prefecture }}</p>

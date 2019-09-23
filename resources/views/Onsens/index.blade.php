@@ -2,8 +2,8 @@
 <header class="jumbotron-fluid header1">
   <div class="title">
     <h1 class="front_h1">関東温泉</h1>
-    <a href="{{ route('login') }}">Login</a>
   </div>
+  <a href="{{ route('login') }}">Login</a>
   <div class="author_box">
   </div>
     <div class="container">
@@ -77,10 +77,10 @@
     </div>
 </header>
 <div class="contaienr main_section">
-  <article class="animated">
+  <article>
     @foreach ($onsens as $onsen)
-    <div class="article_box animated">
-      <div class="article_inner-box animated">
+    <div class="article_box">
+      <div class="article_inner-box">
         <h2><a href="{{ action('OnsenController@show', $onsen->id) }}">{{ $onsen->name }}</a></h2>
           <div class="p_box">
             <p class="{{ prefecture($onsen->prefectureint) }}">{{ $onsen->prefecture }}</p>
