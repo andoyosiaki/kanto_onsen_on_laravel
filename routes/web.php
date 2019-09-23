@@ -25,3 +25,5 @@ Route::get('/Onsens/store','OnsenController@store');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/gets/show', 'HomeController@show');
+Route::post('/gets/add', 'HomeController@add');
