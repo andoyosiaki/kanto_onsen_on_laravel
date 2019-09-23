@@ -52,9 +52,9 @@
             <dt>基本料金</dt>
             <dd class="before_info">平日・大人料金：{{ $onsen->w_a_fee,"円" }}</dd>
             <dd class="before_info">平日・子供料金：{{ $onsen->w_c_fee,"円" }}</dd>
-            <dd class="after_info">休日・大人料金：{{ $onsen->h_a_fee }}
+            <dd class="after_info">休日・大人料金：{{ fee($onsen->h_a_fee) }}
             </dd>
-            <dd class="after_info">休日・子供料金：{{ $onsen->h_c_fee }}
+            <dd class="after_info">休日・子供料金：{{ fee($onsen->h_c_fee) }}
             </dd>
             <span class="info_text">( 詳しい料金体系は店舗公式ホームページをご覧下さい。)</span>
           </dl>
@@ -70,7 +70,7 @@
           <dl class="open_time">
             <dt>営業時間</dt>
             <dd class="open_weekday">平日　{{ timesubstr($onsen->time_opne) }} - {{ timesubstr($onsen->time_close) }}</dd>
-            <dd class="open_holiday">休日　{{ timesubstr($onsen->w_time_opne) }} - {{ timesubstr($onsen->w_time_close) }}
+            <dd class="open_holiday">休日　{{ checktime(timesubstr($onsen->w_time_opne)) }} - {{ checktime(timesubstr($onsen->w_time_close)) }}
             </dd>
           </dl>
         </div>

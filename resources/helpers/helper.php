@@ -40,3 +40,11 @@ function _prefecture($prefecture){
       return $var.'円';
     }
   }
+
+  function checktime($val){
+    if($val === '00:00'){
+      return '同上';
+    }else {
+      return $val;
+    }
+  }

@@ -63,4 +63,12 @@ class OnsenController extends Controller
       $onsens = Onsen::where(['open_bath' => '◯'])->get();
       return view('Onsens.type4',compact('onsens'));
     }
+
+    public function store(PostRequest $request)
+    {
+      $post = new Onsen();
+
+
+      return redirect('/');
+    }
 }

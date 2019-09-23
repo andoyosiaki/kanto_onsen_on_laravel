@@ -2,6 +2,7 @@
 <header class="jumbotron-fluid header1">
   <div class="title">
     <h1 class="front_h1">関東温泉</h1>
+    <a href="{{ route('login') }}">Login</a>
   </div>
   <div class="author_box">
   </div>

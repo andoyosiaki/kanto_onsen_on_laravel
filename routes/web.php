@@ -20,6 +20,7 @@ Route::get('/Onsens/type1','OnsenController@type1');
 Route::get('/Onsens/type2','OnsenController@type2');
 Route::get('/Onsens/type3','OnsenController@type3');
 Route::get('/Onsens/type4','OnsenController@type4');
+Route::get('/Onsens/store','OnsenController@store');
 
 Auth::routes();
 
